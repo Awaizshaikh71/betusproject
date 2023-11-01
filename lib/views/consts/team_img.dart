@@ -1,0 +1,21 @@
+class TeamAssets {
+  static String arizonaCardinals = 'assets/teamsLogo/Arizona Cardinals.png',
+      atlantaFalcons = "assets/teamsLogo/Atlanta Falcons.png",
+      baltimoreRavens = "assets/teamsLogo/Baltimore Ravens.png",
+      carolinaPanthers = "assets/teamsLogo/Carolina Panthers.png",
+      cincinnatiBengals = "assets/teamsLogo/Cincinnati Bengals.png",
+      denverBroncos = "assets/teamsLogo/Denver Broncos.png",
+      eagless = "assets/teamsLogo/eagless.png",
+      greenBayPackers = "assets/teamsLogo/Green Bay Packers.png",
+      colts = "assets/teamsLogo/colts.png",
+      kansasCityChiefs = "assets/teamsLogo/Kansas City Chiefs.png",
+      losAngelesRams = "assets/teamsLogo/Los Angeles Rams.png",
+      newEnglandPatriots = "assets/teamsLogo/New England Patriots.png",
+      newOrleansSaints = "assets/teamsLogo/New Orleans Saints.png",
+      newYorkGiants = "assets/teamsLogo/New York Giants.png",
+      philadelphiaEagles = "assets/teamsLogo/Philadelphia Eagles.png",
+      san = "assets/teamsLogo/San.png",
+      seattleSeahawks = "assets/teamsLogo/Seattle Seahawks.png",
+      pittsburghSteelers = "assets/teamsLogo/Pittsburgh Steelers.png",
+      tampaBayBuccaneers = "assets/teamsLogo/Tampa BayBuccaneers.png";
+}
