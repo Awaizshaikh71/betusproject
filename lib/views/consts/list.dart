@@ -7,16 +7,7 @@ List<String> menuList = ["Baseball", "American Football", "BasketBall"];
 List<Map<dynamic, String>> imageList = [
   {'name': ' Basketball', 'path': 'assets/BasketBall.png'},
   {'name': 'Americanfootball', 'path': 'assets/AmericanFootball.png'},
-  {'name': 'Baseball', 'path': 'assets/BaseBall.png'},
-
-  // Add more image entries as needed
-];
-List<Map<dynamic, String>> dataList = [
-  {'name': ' Basketball', 'path': 'assets/BasketBall.png'},
-  {'name': 'Americanfootball', 'path': 'assets/AmericanFootball.png'},
-  {'name': 'Baseball', 'path': 'assets/BaseBall.png'},
-
-  // Add more image entries as needed
+  {'name': 'Baseball', 'path': 'assets/baseball.jpg'},
 ];
 
 List<Map<dynamic, dynamic>> ncf = [

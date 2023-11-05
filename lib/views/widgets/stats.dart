@@ -19,7 +19,7 @@ class Stats extends StatelessWidget {
         );
       },
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(10),
             topRight: Radius.circular(10),
@@ -35,13 +35,16 @@ class Stats extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 item["data"],
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 30),
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Color.fromARGB(255, 185, 185, 185),
                     offset: Offset(0, 2),
@@ -55,25 +58,31 @@ class Stats extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        item["team_one_logo"],
-                        width: 80,
+                  Flexible(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            item["team_one_logo"],
+                            width: 80,
+                          ),
+                          const SizedBox(height: 20),
+                          Text(
+                            item["team_one"],
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          )
+                        ],
                       ),
-                      const SizedBox(height: 20),
-                      Text(
-                        item["team_one"],
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                    ),
                   ),
                   Container(
-                    height: 25,
-                    width: 50,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.grey, // Border color
@@ -84,28 +93,33 @@ class Stats extends StatelessWidget {
                     ),
                     child: Text(
                       item["time"],
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                      style: const TextStyle(
+                        color: Colors.grey, // Border color
                         fontSize: 12,
                       ),
                     ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        item["team_two_logo"],
-                        width: 80,
+                  Flexible(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            item["team_two_logo"],
+                            width: 80,
+                          ),
+                          const SizedBox(height: 20),
+                          Text(
+                            item["team_two"],
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
                       ),
-                      const SizedBox(height: 20),
-                      Text(
-                        item["team_two"],
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                    ),
                   ),
                 ],
               ),

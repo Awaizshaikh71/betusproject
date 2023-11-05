@@ -1,5 +1,4 @@
 import 'package:betusproject/views/consts/list.dart';
-import 'package:betusproject/views/scoreScreen.dart';
 import 'package:betusproject/views/widgets/stats.dart';
 import 'package:flutter/material.dart';
 import 'package:stroke_text/stroke_text.dart';
@@ -77,7 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image.asset(item["path"]!, width: 20, height: 20),
+                          Image.asset(
+                            item["path"]!,
+                            width: 20,
+                            height: 20,
+                          ),
                           Text(
                             item["name"]!,
                             style: TextStyle(
@@ -116,19 +119,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  if (_selectedIndex == 0)
-                    ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
-                      itemCount: ncf.length,
-                      shrinkWrap: true,
-                      itemBuilder: (context, index) {
-                        var item = ncf[index];
+                  ListView.separated(
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: ncf.length,
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(height: 10);
+                    },
+                    itemBuilder: (context, index) {
+                      var item = ncf[index];
 
-                        return Stats(
-                          item: item,
-                        );
-                      },
-                    ),
+                      return Stats(
+                        item: item,
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 40),
                 ],
               ),
             ),
