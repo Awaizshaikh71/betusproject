@@ -1,4 +1,4 @@
-import 'package:betusproject/views/scoreScreen.dart';
+import 'package:betusproject/views/score_screen.dart';
 import 'package:flutter/material.dart';
 
 class Stats extends StatelessWidget {
@@ -19,6 +19,7 @@ class Stats extends StatelessWidget {
         );
       },
       child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 2),
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(10),
@@ -73,7 +74,7 @@ class Stats extends StatelessWidget {
                             item["team_one"],
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           )
                         ],
@@ -113,7 +114,7 @@ class Stats extends StatelessWidget {
                           Text(
                             item["team_two"],
                             style: const TextStyle(
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.bold,
                             ),
                           )

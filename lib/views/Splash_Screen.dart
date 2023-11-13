@@ -1,24 +1,27 @@
 import 'dart:async';
-
-import 'package:betusproject/views/HomeScreen.dart';
+import 'package:betusproject/views/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-class SplasScreen extends StatefulWidget {
-  const SplasScreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplasScreen> createState() => _SplasScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplasScreenState extends State<SplasScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomeScreen())));
+      const Duration(seconds: 3),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        ),
+      ),
+    );
   }
 
   // var _width=
@@ -28,11 +31,13 @@ class _SplasScreenState extends State<SplasScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/SplashScreen.jpg.jpeg'),
-                fit: BoxFit.fill)),
-        child: SafeArea(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/SplashScreen.jpg.jpeg'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: const SafeArea(
           child: Column(
             children: [],
           ),

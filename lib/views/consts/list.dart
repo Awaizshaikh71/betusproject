@@ -1,5 +1,5 @@
 import 'package:betusproject/views/consts/team_img.dart';
-import 'package:betusproject/views/scoreScreen.dart';
+import 'package:betusproject/views/score_screen.dart';
 import 'package:flutter/material.dart';
 
 List<String> menuList = ["Baseball", "American Football", "BasketBall"];

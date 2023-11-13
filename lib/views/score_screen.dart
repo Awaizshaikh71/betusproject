@@ -1,4 +1,4 @@
-import 'package:betusproject/views/HomeScreen.dart';
+import 'package:betusproject/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class ScoreScreen extends StatefulWidget {
